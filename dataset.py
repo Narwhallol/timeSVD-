@@ -5,7 +5,7 @@ import pandas as pd
 
 
 def load_dataset():
-    data = pd.read_csv('data/ml-100k/u.data', sep='\t', names=['userId', 'movieId', 'rating', 'timestamp'])
+    data = pd.read_csv('ml-100k/u.data', sep='\t', names=['userId', 'movieId', 'rating', 'timestamp'])
     data = np.array(data.iloc[:, :4]).tolist()
     np.random.seed(1234)
     random.shuffle(data)
